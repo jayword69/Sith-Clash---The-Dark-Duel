@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sith Clash - The Dark Duel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Pantalla de Inicio -->
+  <section id="pantalla-inicio" class="pantalla active">
+    <img src="asset/logo.png" alt="Logo de Crypto Force" class="logo">
+    <h1 class="titulo">Sith Clash - The Dark Duel</h1>
+    <p class="subtitulo">Un duelo estratégico entre los Sith. Domina las fuerzas del trading.</p>
+    <button id="boton-iniciar" class="boton">¡Comenzar!</button>
+  </section>
+
+  <!-- Pantalla de Selección de Personaje -->
+  <section id="seleccion-personaje" class="pantalla">
+    <h2 class="titulo">Elige tu Sith</h2>
+    <div class="tarjetas">
+      <div class="tarjeta" data-personaje="Darth Luke">
+        <img src="asset/characters/darthluke.png" alt="Darth Luke" class="imagen-personaje">
+        <h3 class="nombre-personaje">Darth Luke</h3>
+        <p class="descripcion-personaje">Un guerrero rápido y devastador.</p>
+      </div>
+      <div class="tarjeta" data-personaje="Darth Vader">
+        <img src="asset/characters/darthvader.png" alt="Darth Vader" class="imagen-personaje">
+        <h3 class="nombre-personaje">Darth Vader</h3>
+        <p class="descripcion-personaje">El equilibrio entre fuerza y poder.</p>
+      </div>
+      <div class="tarjeta" data-personaje="Darth Nihilus">
+        <img src="asset/characters/darthnihilus.png" alt="Darth Nihilus" class="imagen-personaje">
+        <h3 class="nombre-personaje">Darth Nihilus</h3>
+        <p class="descripcion-personaje">El maestro de la energía oscura.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pantalla de Batalla -->
+  <section id="pantalla-batalla" class="pantalla">
+    <div class="marcador">
+      <span class="puntuacion" id="puntuacion-jugador">Jugador: 0</span>
+      <span class="puntuacion" id="puntuacion-ia">IA: 0</span>
+    </div>
+    <div id="arena-batalla" class="arena">
+      <div class="personaje-container">
+        <img id="imagen-jugador" class="imagen-combate" src="" alt="Personaje del jugador">
+        <p id="nombre-jugador" class="nombre-combate"></p>
+      </div>
+      <h2 id="mensaje-batalla" class="titulo">¡Prepárate para el duelo!</h2>
+      <div class="personaje-container">
+        <img id="imagen-ia" class="imagen-combate" src="" alt="Personaje de la IA">
+        <p id="nombre-ia" class="nombre-combate"></p>
+      </div>
+    </div>
+    <div id="acciones">
+      <!-- Los botones de ataque serán dinámicos en JS según el personaje elegido -->
+    </div>
+    <!-- Botón de reinicio de la batalla -->
+    <button id="boton-reiniciar" class="boton-reiniciar">Reiniciar Juego</button>
+  </section>
+    
+  <script src="script.js"></script>
+</body>
+</html>
